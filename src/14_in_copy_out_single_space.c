@@ -5,13 +5,17 @@
  */
 void main()
 {
-    int c, pc;
-    pc = 0;
+    int c;
     while((c = getchar()) != EOF)
     {
-        if (((c == ' ') && (pc != ' ')) || c != ' ')
-			putchar(c);
-	pc = c; /* Previous char is set to c */
+
+        if (c == ' ')
+	{
+	putchar(c);
+		while((c = getchar()) == ' ')
+			;
+	}
+	putchar(c);
     }
     printf("\n");
 }
