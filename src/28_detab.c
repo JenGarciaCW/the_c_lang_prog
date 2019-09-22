@@ -4,7 +4,6 @@
  * 	Replaces tabs at the input with the correct ammount of spaces
  * 	to go to the next tabulation stop. Each tabulation stop will
  * 	be defined as a parameter.
- * entab()
  */
 
 #define TAB_COL_SIZE 8 
