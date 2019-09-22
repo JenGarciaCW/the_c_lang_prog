@@ -12,17 +12,19 @@
 void main()
 {
 	int c, i, space_count, j;
+	space_count = 0;
 	for( i = 1; (c = getchar()) != EOF; ++i)
 	{
 		if(c == '\t')
 		{
 			--i;
-			space_count = TAB_COL_SIZE -(i) % TAB_COL_SIZE ;
+			space_count = TAB_COL_SIZE -(i % TAB_COL_SIZE) ;
 			
+			//printf("\n%d, %d\n",i, space_count);
 			for(j = 0; j < space_count; ++j)
 			{
-				++i;
 				putchar('_');
+				++i;
 			}
 
 		}
